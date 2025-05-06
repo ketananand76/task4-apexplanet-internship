@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>K.<span>A</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <section class="hero-section">
+    
+    <video autoplay muted loop class="hero-video">
+      <source src="assets/video1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+      <img src="assets/profile.png" alt="Profile Picture" class="circular-image">
+      <h1 class="typing-text">Hi, I'm <span id="name" class="span">KETAN ANAND</span></h1>
+      <p>Web Developer | Front-End Enthusiast | Problem Solver</p>
+    </div>
+  </section>
+  
+
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>I am a passionate front-end developer with experience in building dynamic and responsive websites using HTML, CSS, and JavaScript. I love solving problems and constantly learning new technologies.I'm a passionate Graphic Designer with a strong eye for detail and a deep love for creative problem-solving. I specialize in crafting visually compelling designs that communicate clearly and engage effectively. With experience across tools like Adobe Photoshop, Illustrator, After Effects, and Figma, I bring concepts to life—from branding and logo design to UI/UX interfaces, motion graphics, and marketing assets.</p>
+
+      <p>I believe great design is not just about aesthetics but also about strategy, storytelling, and impact. Whether working solo or collaborating with teams, I aim to deliver thoughtful solutions that resonate with audiences and align with brand goals.</p>
+  </section>
+
+  <section id="projects" class="content-section">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>To-Do List App</h3>
+      <p>A simple yet effective task manager with LocalStorage functionality.</p>
+      <div class="todo-container">
+        <input type="text" id="taskInput" placeholder="Enter a task..." required/>
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h3>Product Listing Page</h3>
+      <p>Dynamic filtering and sorting of products using pure JavaScript.</p>
+      <div class="controls">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="Logo">Logo</option>
+          <option value="Poster">Poster</option>
+          <option value="UI">UI Design</option>
+          <option value="Animation">Animation</option>
+        </select>
+    
+        <select id="sortRating">
+          <option value="default">Sort by Rating</option>
+          <option value="high">High to Low</option>
+          <option value="low">Low to High</option>
+        </select>
+      </div>
+    
+      <div class="product-list" id="productList"></div>
+      <div id="productList" class="product-list"></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skill">
+      <div class="skill-name"><i class="fab fa-html5"></i> HTML</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 95%;">95%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 90%;">90%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fab fa-js-square"></i> JavaScript</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 85%;">85%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fab fa-react"></i> React</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 80%;">80%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fab fa-figma"></i> Figma</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 75%;">75%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fas fa-paint-brush"></i> Photoshop</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 70%;">70%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fas fa-film"></i> Adobe After Effects</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 65%;">65%</div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name"><i class="fas fa-pencil-ruler"></i> UI/UX Design</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 85%;">85%</div></div>
+    </div>
+  </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ketan anand. All rights reserved.</p>
+  </footer>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</section>
+
+<script>
+  const products = [
+    { name: "Creative Logo", category: "Logo", rating: 4.8, image: "assets/creativelogo.jpg" },
+    { name: "Minimal UI Kit", category: "UI", rating: 4.5, image: "assets/MinimalUIKit.jpg" },
+    { name: "Poster Design X", category: "Poster", rating: 4.2, image: "assets/poster.jpg" },
+    { name: "3D Logo Pack", category: "Logo", rating: 4.9, image: "assets/3d.jpg" },
+    { name: "Event Poster", category: "Poster", rating: 4.0, image: "assets/event.png" },
+    { name: "Landing Page UI", category: "UI", rating: 4.7, image: "assets/landing.jpg" },
+    { name: "Animated Intro", category: "Animation", rating: 4.3, image: "assets/images.jpg" }
+  ];
+
+  const productList = document.getElementById("productList");
+  const categoryFilter = document.getElementById("categoryFilter");
+  const sortRating = document.getElementById("sortRating");
+
+  function renderProducts() {
+    let filtered = [...products];
+
+    const category = categoryFilter.value;
+    if (category !== "all") {
+      filtered = filtered.filter(p => p.category === category);
+    }
+
+    if (sortRating.value === "high") {
+      filtered.sort((a, b) => b.rating - a.rating);
+    } else if (sortRating.value === "low") {
+      filtered.sort((a, b) => a.rating - b.rating);
+    }
+
+    productList.innerHTML = filtered.map(product => `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}" />
+        <div class="product-name">${product.name}</div>
+        <div>${product.category}</div>
+        <div class="rating">⭐ ${product.rating}</div>
+      </div>
+    `).join('');
+  }
+
+  categoryFilter.addEventListener("change", renderProducts);
+  sortRating.addEventListener("change", renderProducts);
+
+  renderProducts();
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
